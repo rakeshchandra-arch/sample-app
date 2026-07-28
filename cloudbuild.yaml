@@ -10,7 +10,7 @@ steps:
     id: 'Build Docker image'
     args: ['build', '-t', 'us-east1-docker.pkg.dev/$PROJECT_ID/my-repository/hello-cloudbuild:v1.0', '.']
 
-  # Step 3: Push the Docker image to Artifact Registry
+  # Step 3: Push the Docker image to Artifact Registry - Test
   - name: 'gcr.io/cloud-builders/docker'
     id: 'Push Docker image'
     args: ['push', 'us-east1-docker.pkg.dev/$PROJECT_ID/my-repository/hello-cloudbuild:v1.0']
